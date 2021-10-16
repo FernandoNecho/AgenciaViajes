@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------------------------*/
+/*---------------------------Estilos Pagina Promo---------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+#gridPromo{
+    display: grid;
+    grid-template-areas:    "header header "
+                            "nav nav"
+                            "aside main "
+                            "aside main"
+                            "footer  footer";
+    
+    grid-template-columns: 20% 80%;
+
+    @include movil{
+        grid-template-areas:    "header "
+                                "nav "
+                                "aside "
+                                "main"
+                                "footer";
+        
+        grid-template-columns: 100%;       
+    }
+}
+
+#mainPromo{
+    grid-area: main;
+}
+.card{
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+/*-----------SubMenu-------*/
+#gridAside{
+    grid-area: aside;
+    margin: 0 1px;
+}
+
+.asideMenu{
+    background-color: rgb(35, 223, 213);
+    height: 100%; 
+    position: sticky;
+    top: 50%;
+
+    &__subMenu{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        background-color: rgb(35, 223, 213);
+        padding-left: 0;
+
+        &:first-child{
+            border-top: 1px solid gray;
+        }
+
+        li{
+            width: 100%;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid gray;
+
+            @include movil{
+                padding: .5rem 0;
+            }
+        }
+
+        a{
+            text-decoration: none ;
+            text-align: center;
+            font-style: italic;
+            color: white;
+            font-size: 1.2rem;  
+            padding: 0.5rem; 
+
+            @include tablet{
+                font-size: 1rem;
+            }
+
+            &:hover{
+    
+                border: 3px solid gray;
+                border-radius: 30% 5% 30%;
+            }
+        }
+    }
+}
+
+

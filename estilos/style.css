@@ -1,0 +1,703 @@
+*{ /*reset general*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----Cabecera y menu y footer para todas las paginas---*/
+body{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+
+    background: black;
+}
+
+.gridIndex{
+    display: grid;
+    grid-template-areas:    "header header "
+                            "nav  nav"
+                            "aside main"
+                            "aside section"
+                            "footer  footer";
+    
+    grid-template-columns: 1fr 5fr;
+}
+
+/*--contenedor del logo, titulo y menu..*/
+.containerHeader{ 
+    grid-area: header;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: black;
+    padding: 0.5rem 0;
+
+    background: black;
+    
+}
+
+.logoTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0 1 50%;  
+}
+
+.logoTitle img{
+    transition: transform 2s;
+    cursor: pointer;
+    animation: logoAnimate 4s linear 3s 2 alternate;
+}
+
+.logoTitle img:hover{
+    transform: rotate(360deg);
+}
+
+@keyframes logoAnimate {
+    from { }
+    to {
+        transform: translate(100%)
+    }
+}
+
+    /*---Titulos---*/
+h1{
+    color: white;
+    font-family: 'Indie Flower', sans-serif; /*--Indie flower tomada de google font--*/
+    margin-left: 15%;
+    font-size: 250%;
+    letter-spacing: 0.6rem;
+    transform: skewY(-10deg);
+}
+    /*--H2--*/
+.subtitulo{ 
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: 'Amatic SC', 'Times New Roman'; /*--Amatic SC tomada de google font--*/
+    letter-spacing: 0.2em;
+    padding: 1rem 0;
+}
+
+.subTitle{
+    margin-top: -1%;
+    border-top: 1px solid orangered;
+}
+
+h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family:'Amatic SC', 'Times New Roman'; /*--Amatic SC tomada de google font--*/
+
+}
+
+    /*---menu General---*/
+.navegacion{
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: black;
+    list-style: none;
+}
+
+.menu>li{
+    border:.3rem solid transparent;
+    text-align: center;
+    transition: border .5s;
+}
+
+.menu>li>a{
+    color: orangered;
+    text-decoration: none;
+    padding: .2rem .3rem;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.menu li:hover{
+    border-bottom: .3rem solid orangered;
+    
+}
+
+
+/*----footer General---*/
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:    "titulo titulo"
+                            "contacto redes";
+    color:white;
+    
+    background: rgb(2,0,36);
+     
+}
+.subTitlefooter{
+    grid-area: titulo;
+}
+.contacto{
+    grid-area: contacto;
+}
+.linkRedes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1%;
+}
+.linkRedes>a{
+    text-decoration: none; 
+    color: rgb(26, 10, 10); 
+    margin-right: 2%; 
+}
+
+.linkRedes a:hover{
+    transform: scale(1.5,1.5);
+}
+.correo{
+    text-decoration:none;
+    color: orangered;
+    margin:0 5%;
+}
+
+/*----------Index.html----------------------*/
+
+main{
+    margin: 1% 0;
+}
+
+.principal{
+    grid-area: main;
+}
+
+.gridSection{
+    grid-area: section;
+}
+.gridFooter{
+    grid-area: footer;
+}
+.parrafoInf{
+    color: white;
+    text-align: center;
+}
+
+
+.carrusel{
+    max-width: 640px;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    margin: 1rem auto;
+    overflow-x: hidden;
+}
+
+.carrusel label{
+    border: medium solid grey ;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.5rem 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    cursor: pointer;
+}
+
+.carrusel input{
+    display: none;
+}
+
+.carrusel .slides{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 400%;
+    list-style: none;
+    padding-left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imgSlider{
+    width: 100%;  
+}
+
+#slide-1:checked ~ .slides{
+    transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides{
+    transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides{
+    transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides{
+    transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4{
+    background-color: orangered;
+}
+
+
+.informacion{
+    grid-area: aside;
+
+    background-color: black;
+    border-left: 3px black black;
+    color: white;
+
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.promociones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto ;
+    gap: 1%;
+    align-content: center;
+
+    color: rgb(8, 8, 73);
+    border: 1px solid transparent;
+}
+
+.promoDos{
+    order: 1;
+}
+
+.containerPromo{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+
+    margin: 1%;
+    padding: 0 6px;
+    border: thin solid black;
+
+    transition: transform 1s ease-in-out;
+}
+
+.imgPromo{
+    width: 100%;
+    
+}
+
+.containerPromo:hover{
+    border: 2px solid orangered;
+    transform: scale(1.1,1.1);
+   
+}
+
+/*---Estilos pagina Argentina----*/
+
+.gridArgentina{
+    grid-template-areas: "header"
+                         "nav"
+                         "main"
+                         "footer";
+}
+
+.contentMainArg{
+    grid-area: main;
+    
+    display: flex;
+    flex-direction: column; 
+}
+
+.video{
+    text-align: center;
+}
+
+.video>video{
+    width: 80%;
+}
+
+.descripcion{
+    text-align: center;
+    font-family:'Amatic SC', 'Times New Roman'; /*--Amatic SC tomada de google font--*/
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    letter-spacing:0.3rem;
+}
+
+/*---Estilos Formulario contacto----*/
+
+.gridContacto{
+    grid-template-areas:    "header"
+                            "nav"
+                            "main"
+                            "footer";
+    grid-template-columns: 100%;
+}
+
+.frmContacto{
+    grid-area: main;
+    
+}
+
+form{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid orangered;
+    padding: 2%;
+    font-size: 1.4rem;
+    color: orangered;
+}
+
+section>label{
+    font-size: 1rem;
+}
+
+.formulario section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+
+.inputText>input{
+    width: 60%;
+}
+
+.selDestinos>select{
+    width: 60%;
+}
+
+.selDestinos>label, .terminos>label{
+    margin-right: 1%;
+}
+
+.comentarios>textarea{
+    width: 60%;
+}
+
+#btnForm{
+    display: flex;
+    flex-direction: row;
+
+}
+#btnForm>input{
+    width: 20%;
+    margin-right: 1%;
+    padding: 1%;
+    cursor: pointer;
+    font-family:'Amatic SC', 'Times New Roman'; /*--Amatic SC tomada de google font--*/
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btnForm>input:hover{
+    background-color: rgba(231, 231, 231, 0.651);
+}
+
+@keyframes backInRight {
+    0% {
+      -webkit-transform: translateX(2000px) scale(0.7);
+      transform: translateX(2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      -webkit-transform: translateX(0px) scale(0.7);
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .backInRight {
+    -webkit-animation-name: backInRight;
+    animation-name: backInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+/*---Estilos Pagina Promo----*/
+
+.gridBody{
+    display: grid;
+    grid-template-areas:    "header header "
+                            "nav  nav"
+                            "aside main "
+                            "aside main"
+                            "footer  footer";
+    
+    grid-template-columns: 1fr 5fr;
+}
+
+.mainPromo{
+    grid-area: main;
+    background-color: gray;
+    
+}
+
+/*-----------SubMenu-------*/
+.gridAside{
+    grid-area: aside;
+}
+
+.asideMenu{
+    background-color: black;
+    height: 100%;
+}
+
+.subMenu{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background-color: black;
+}
+
+.subMenu li{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid orangered;
+    transition: transform 1s;
+}
+
+.subMenu:first-child{
+    border-top: 1px solid orangered;
+}
+.subMenu a{
+    text-decoration: none ;
+    text-align: center;
+    font-style: italic;
+    color: orangered;
+    font-size: 1.2rem;  
+    padding: 0.5rem; 
+}
+
+/*.subMenu li a:hover{
+    
+    border: 1px solid orangered;
+    border-image: linear-gradient(black 30%, yellow 100%) 1;
+    border-radius: 30% 5% 30%;
+   
+}*/
+
+.subMenu li:hover{
+    background: linear-gradient(black 50%, yellow 100%);
+}
+/*-----------Grillas----*/
+.grillas{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-items: center;
+    margin: 2%;
+    background-color: rgba(170, 168, 168, 0.74);
+    
+}
+
+
+.grillas>img, .grillas>div{
+    width: 80%;
+    
+}
+
+.odd{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.oddDiv{
+    grid-column: 1;
+    grid-row: 2;
+}
+h2{
+    text-align: center;
+}
+p{
+    font-size: 120%;
+    font-style: italic;
+}
+
+/*------Nosotros----*/
+
+.gridNosotros{
+    grid-template-areas:    "header"
+                            "nav"
+                            "main"
+                            "footer";
+}
+
+.nosotros{
+    grid-area:main;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+   
+}
+
+.contentWe{
+    display: flex;
+}
+
+
+.infoNosotros{
+    background-image: url(../img/arcipelagoSanBlas.jpg);
+    background-size: cover;
+    height: 100vh; 
+    z-index: -10;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.parrafoInfo{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    width: 80%;
+    padding: .5rem;
+    font-family: 'Indie Flower', sans-serif; /*--Indie flower tomada de google font--*/
+    font-size: 150%;
+    font-weight:600;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+/*----------Responsive--------*/
+
+/*------responsive 800-----*/
+@media screen and (max-width: 800px){
+        .promociones{   
+            grid-template-columns: 50% 50%;
+            justify-content: center;
+            margin: 7% 0;;
+        }
+}
+    
+
+/*------responsive 600-----*/
+@media screen and (max-width: 600px)  {
+    .logoTitle{
+        display: none;
+    }
+
+    .containerHeader{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navegacion{
+        position: relative;
+    }
+    .navegacion ul{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .menu li{
+        transition: border .5s;
+    }
+    .gridIndex{
+        display: grid;
+        grid-template-areas:    "header  "
+                                "nav  "
+                                "main "
+                                "aside "
+                                "section  "
+                                "footer  ";
+        
+        grid-template-columns: 100%;
+    }
+    .promociones{   
+        grid-template-columns: 90%;
+        justify-content: center;
+        margin: 7% 0;;
+    }
+
+    .parrafoInfo{
+        font-size: 100%;
+    }
+    /*----------Footer-----*/
+    .gridFooter{
+        display: grid;
+        grid-template-areas:    "titulo"
+                                "contacto"
+                                "redes";
+        grid-template-columns: 100%;
+        color:white;
+        background-color: black;
+    }
+
+    .linkRedes{
+        justify-content: center;
+    }
+
+    /*----------Promociones------*/
+    .gridBody{
+        display: grid;
+        grid-template-areas:    "header  "
+                                "nav  "
+                                "main  "
+                                " aside"
+                                "footer";
+        
+        grid-template-columns: 100%;
+    }
+
+    .grillas{
+        grid-template-columns: 100%;
+    }
+}
+
+
+
+/*------responsive 360-----*/
+@media screen and (max-width: 360px){
+    .menu>li a{
+        font-size: 1.2rem;
+    }
+
+    .linkRedes{
+        justify-content: space-evenly;
+        padding: 2% 0;
+    }
+    .linkRedes img{
+       width: 32px;
+    }
+}

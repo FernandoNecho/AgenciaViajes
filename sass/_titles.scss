@@ -1,0 +1,41 @@
+    /*---Titulos---*/
+    .title{
+        background-color: $bc-primary;
+        color: $c-primary;
+        text-align: center;
+        font-family: $font-primary; /*--Amatic SC tomada de google font--*/
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        z-index: 10;
+        padding: 1rem 0 !important;
+    }
+
+    .letter{
+        letter-spacing: 1rem;
+        background-color: transparent;
+        &::first-letter{
+        background-color: orangered;
+        font-size: 100%;
+        padding-left: 10px;
+        }
+    }
+
+    @for $i from 1 to 5 {
+        h#{$i}{//estilos para todos los title Hx;
+            @extend .title;
+
+            @if $i>1 and $i<4{              
+                font-size: 1.5rem;                
+
+            }@else{
+                @extend .letter;
+                font-size: 2.5rem;
+            }
+            
+        }
+    }
+    
+    
+     
+    /*-------------------------------*/

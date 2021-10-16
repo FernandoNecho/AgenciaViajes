@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="En Travel vas a encontrar las mejores ofertas para tus vacaciones, ademas de sentirte acompañado y respaldado por nuestro equipo de profesionales.">
+    <meta name="keywords" content="Viajes, Hoteles, vacaciones, vuelos, turismo, hospedaje, cruceros, excursiones">
+
+    <title>Travel - Contacto</title>
+
+    
+    <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../sass/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body class="gridBody">
+
+    <header class="header">
+        <!--Logo y Titulo-->
+        <div class="header__logoTitle">
+            <a href="../index.html">
+                <img src="../icons/logo.svg" alt="Logo"  class="header__logoTitle--logo" >
+            </a>
+            <h1 class="header__logoTitle--title header__logoTitle--backInRight">Travel</h1>
+        </div>
+    </header>
+
+    <!--Menu-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"  id="navGrid">
+
+        <div class="container-fluid">
+          <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar__ul navbar-nav">
+              <li class="navbar__li nav-item">
+                <a class="navbar__a nav-link" href="../index.html"><img src="../icons/homeWhite.svg" alt="Home"></a>
+              </li>
+              <li class="navbar__li nav-item">
+                <a class="navbar__a nav-link" href="#">Promociones</a>
+              </li>
+              <li class="navbar__li nav-item">
+                <a class="navbar__a nav-link" href="./argentina.html">Argentina</a>
+              </li>
+              <li class="navbar__li nav-item">
+                <a class="navbar__a nav-link" href="./contacto.html">Contacto</a>
+              </li>
+              <li class="navbar__li nav-item">
+                <a class="navbar__a nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+<!----------------------------------------------------->
+    <main id="frmContacto">
+        <section class="formulario">
+            <form action="GET">
+                <fieldset class="form">
+                   <h2 class="form__subtitle">Formulario de Contacto</h2>
+                    <section class="form__inputText">
+                        <label class="form__label" for="nombre">Nombre:</label>
+                        <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                       
+                        <label class="form__label" for="apellido">Apellido:</label>
+                        <input class="form__input"  type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                        
+                        <label class="form__label" for="mail">Email:</label>
+                        <input class="form__input" type="email" name="mail" id="mail" placeholder="Email" required>
+                        
+                        <label class="form__label" for="telefono">Telefono:</label>
+                        <input class="form__input" type="number" name="Telefono" id="telefono" placeholder="Telefono" required>
+                    </section>
+    
+                
+                    
+                    <section class="form__terminos">
+                        <label for="terminos">Acepto Recibir Informacion a mi correo</label>
+                        <input type="checkbox" name="terminos" id="terminos">
+                    </section>
+                    
+                    <section class="form__comentarios">
+                        <legend>Comentarios</legend>
+                        <textarea name="comentarios"  class= "form__selDestinos" cols="100" rows="6"></textarea>
+                    </section>
+
+                    <section class="form__btnForm">
+                      <input class="form__btnForm--btn" type="submit" value="Enviar">
+                      <input class="form__btnForm--btn" type="reset" value="Reset">
+                    </section>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="contact">
+            <h2>Infromacion de Contacto</h2>
+
+            <span>Email: Travel@gmail.com</span>
+            <span>Telefono: 123456789</span>
+            <span>Direccion: Av. de los viaje - A todo el Mundo - Argentina</span>
+        </section>
+    </main>
+<!----------------------------------------------------->  
+    <!--Pie de Pagina-->
+    <footer class="gridFooter"> 
+        <h2 class="subtitulo gridFooter__subTitle">Travel</h2>
+        <div class="gridFooter__contacto">
+            <a href="" class="gridFooter__contacto--correo">
+                <i class="fa fa-envelope"></i> travel@gmail.com</a>
+            <i class="fa fa-phone-plus"></i> 123456789
+        </div>
+        
+        <div class="gridFooter__linkRedes">
+          <a href=""><i class="fab fa-whatsapp"></i></a>
+          <a href=""><i class="fab fa-facebook"></i> </a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a> 
+          <a href=""><i class="fab fa-youtube"></i></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>

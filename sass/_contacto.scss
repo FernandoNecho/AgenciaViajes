@@ -1,0 +1,152 @@
+#frmContacto{
+    grid-area: main;
+  
+    display: grid;
+    grid-template-columns: 40% 30%;
+    justify-content: center;
+    background-image: url('../img/alpesSuizos.jpg');
+    background-position: center;
+    background-size: cover;
+    @include tablet{
+        grid-template-columns: 100%;
+    }
+}
+
+.font{
+    font-family: $font-secundary;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
+}
+.formulario{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    &__label{
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    &__subtitle{
+        background-color: transparent;
+        text-decoration-line:underline ;
+        &::first-letter{
+            background-color: orangered;
+        }
+    }
+
+    &__inputText{
+        display: flex !important;
+        flex-direction: column !important;
+        place-items: center;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    &__input{
+        width: 60%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 2rem;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        @include tablet{
+            width: 40%
+        }
+    }
+    
+    &__label{
+        @extend .font;
+    }
+
+    &__terminos{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+
+        @include tablet{
+            justify-content: center;
+        }
+    }
+
+    &__comentarios{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-bottom: 1rem;
+        legend{
+            font-size: 1rem;
+        }
+
+        @include tablet{
+            width: 40%;
+        }
+    }
+    
+    &__selDestinos{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    &__btnForm{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+
+        @include tablet{
+            justify-content: center;
+            
+        }
+        
+        &--btn{
+            padding: .5rem;
+            font-family: $font-primary;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: .2rem;
+        }
+    }   
+}
+
+.contact{
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,20%);
+
+    align-items: center;
+    
+    padding: 0 1rem;
+    h2{
+        text-align: center;
+        text-decoration-line:underline;
+        background-color: transparent;
+        color: black;
+
+        @include tablet{
+            margin-top: 1.8rem;
+        }
+        &::first-letter{
+            background-color: orangered;
+        }
+    }
+    span{
+        @extend .font;
+    }
+}
