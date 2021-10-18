@@ -910,6 +910,12 @@ h4 {
   margin-right: auto;
 }
 
+@media screen and (max-width: 360px) {
+  .previaje__pres p {
+    font-size: 1.2rem;
+  }
+}
+
 .info {
   display: -ms-grid;
   display: grid;
@@ -961,6 +967,7 @@ h4 {
   color: white;
   padding: .5rem;
   border-radius: 10rem;
+  text-align: center;
 }
 
 .info__art--btn:hover {
