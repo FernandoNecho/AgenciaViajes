@@ -160,8 +160,12 @@
                 background-color: rgba(0, 0, 0, .3);
                 border-radius: 10px;
                 z-index: 9;
-                top: 50%;
+                top: 38%;
                 left: 10%;
+
+                @include movil{
+                    top: 25%;
+                }
 
                 h4{                
                     font-size: 2rem;
@@ -174,6 +178,10 @@
                     color: $c-primary;
                     letter-spacing:0.2rem;
                     z-index: 10;
+                }
+
+                small{
+                    color: $c-primary;
                 }
             }
         }
