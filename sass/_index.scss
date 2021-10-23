@@ -161,8 +161,9 @@
                 background-color: rgba(0, 0, 0, .5);
                 border-radius: 10px;
                 z-index: 9;
-                top: 38%;
+                top: 36%;
                 left: 10%;
+                padding: .5rem;
 
                 @include movil{
                     top: 25%;
@@ -183,6 +184,7 @@
 
                 small{
                     color: $c-primary;
+                    
                 }
                 &--btnBuy{
                     display: flex;
