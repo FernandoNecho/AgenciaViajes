@@ -78,7 +78,7 @@
 
     <!----------------------------MAIN--------------------->
     <main class="mainPromo">
-      
+
           <h3 id="vuelos" class="mt-2 mainPromo--titlePromo">Vuelos</h3>
 
           <div class="card mb-3 mx-auto" style="max-width: 98%;">
@@ -91,7 +91,7 @@
                   <h3 class="card-title">SUDAFRICA</h3>
                   <p class="card-text">Diseñar un viaje a Sudáfrica asegura una fusión de aventuras únicas entre ilusiones, 
                       encanto y lujo en auténticos safaris. Viajarás a un país inabarcable de contrastes, 
-                      diversidad y belleza.<br><a href="./page404.html" class="btn btn-danger">Saber mas...</a>
+                      diversidad y belleza.<br><a href="#miModal" class="btn btn-danger">Saber mas...</a>
                   </p>   
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -108,7 +108,8 @@
                 <div class="card-body">
                   <h3 class="card-title">EUROPA</h3>
                   <p class="card-text">Es imposible visitar Europa y no maravillarse ante su impresionante belleza, 
-                      su épica historia y su sorprendente diversidad artística y culinaria.<br><a href="./page404.html" class="btn btn-danger">Saber mas...</a>
+                      su épica historia y su sorprendente diversidad artística y culinaria.<br>
+                      <a href="#miModal" class="btn btn-danger">Saber mas...</a>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
               </div>
@@ -203,7 +204,24 @@
               </div>
             </div>
           </div>
-
+<!-----------------Ventana Modal----------->
+          <div id="miModal" class="miModal">       
+            <div class="miModal__contenido">
+                <a href="#" class="miModal--cerrar">X</a>
+                <h2 >SUDAFRICA</h2>
+                <ol>
+                  <li>Incluye Aereos</li>
+                  <li>Hotel Media Pension</li>
+                  <li>Traslados</li>
+                  <li>Excursiones</li>
+                </ol>
+                <div class="miModal__price">
+                  <span><b>Precio:</b> $20.000 + impuestos</span><br>
+                  <button type="button" class="btn btn-dark">Comprar</button>
+                </div>
+            </div>  
+        </div>
+<!---------------------------------------------------->
     </main>
    
 <!----------------------------------------------------->       

@@ -407,7 +407,7 @@ h4 {
   /*--Amatic SC tomada de google font--*/
   font-size: 1.4rem;
   font-weight: 700;
-  z-index: 10;
+  z-index: 9;
 }
 
 .promo__containerPromo .contenido {
@@ -432,7 +432,7 @@ h4 {
 
 .promo__containerPromo .contenido__conText {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   z-index: 9;
   top: 38%;
@@ -461,6 +461,146 @@ h4 {
 
 .promo__containerPromo .contenido__conText small {
   color: white;
+}
+
+.promo__containerPromo .contenido__conText--btnBuy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*----------Ventana Modal compra-------*/
+.buyModal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 99999 !important;
+}
+
+.buyModal__contenido {
+  background-color: white;
+  border: 1px solid black;
+  width: 50%;
+  height: 100vh;
+  padding: 10px 20px;
+  margin: 1% auto;
+  position: relative;
+  z-index: 9999 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .buyModal__contenido {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .buyModal__contenido {
+    width: 90vw;
+  }
+}
+
+.buyModal--cerrar {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0 .4rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.buyModal--cerrar:hover {
+  color: black;
+  background-color: white;
+}
+
+.buyModal h2 {
+  margin-top: .3rem;
+}
+
+.buyModal__frmComprar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .buyModal__frmComprar {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .buyModal__frmComprar {
+    font-size: 0.8rem;
+  }
+}
+
+.buyModal__frmCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.buyModal__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+  width: 100%;
+}
+
+.buyModal__price span {
+  font-family: "Amatic SC", "Times New Roman";
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.buyModal__price--btnModal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#buyModal:target {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*--------------------------------------*/
@@ -777,6 +917,86 @@ form {
   background-color: #23dfd5 !important;
 }
 
+/*-------Ventana Modal--------*/
+.miModal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 99999 !important;
+}
+
+.miModal__contenido {
+  background-color: white;
+  border: 1px solid black;
+  width: 50%;
+  height: 60vh;
+  padding: 10px 20px;
+  margin: 10% auto;
+  position: relative;
+  z-index: 9999 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .miModal__contenido {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .miModal__contenido {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+.miModal--cerrar {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0 .4rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.miModal--cerrar:hover {
+  color: black;
+  background-color: white;
+}
+
+.miModal h2 {
+  margin-top: .3rem;
+}
+
+.miModal__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+}
+
+.miModal__price span {
+  font-family: "Amatic SC", "Times New Roman";
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#miModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*-------------------------*/
 /*-----------SubMenu-------*/
 #gridAside {
   -ms-grid-row: 3;
