@@ -23,12 +23,32 @@
     }
 }
 
-#mainPromo{
+.mainPromo{
     grid-area: main;
+    &--titlePromo{
+        background-color: $bc-secundary;
+       
+    }
 }
+
+
 .card{
     background-color: white;
     border: 1px solid black;
+    &__imag{
+        width: 100%;
+        height: 100%;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+}
+
+.btn-danger{
+    background-color: $bc-primary !important;
+    border-color: $bc-primary !important;
+    &:hover{
+        background-color: $bc-secundary !important;
+    }
 }
 
 

@@ -1,5 +1,14 @@
+.gridContacto{
+    display: grid;
+    grid-template-areas: "header"
+                         "nav"
+                         "mainForm"
+                         "footer";
+    grid-template-columns: 100%;
+                         
+}
 #frmContacto{
-    grid-area: main;
+    grid-area: mainForm;
   
     display: grid;
     grid-template-columns: 40% 30%;
@@ -8,6 +17,10 @@
     background-position: center;
     background-size: cover;
     @include tablet{
+        grid-template-columns: 100%;
+    }
+
+    @include movil{
         grid-template-columns: 100%;
     }
 }
@@ -26,7 +39,9 @@
     justify-content: center;
     align-items: center;
 }
-
+form{
+    width: 100%;
+}
 .form{
     &__label{
         display: flex;
@@ -39,9 +54,14 @@
 
     &__subtitle{
         background-color: transparent;
-        text-decoration-line:underline ;
+        text-decoration-line: underline;
+        
         &::first-letter{
             background-color: orangered;
+        }
+        @include movil{
+            text-align: center;
+            width: 100%;
         }
     }
 
@@ -54,7 +74,7 @@
     }
 
     &__input{
-        width: 60%;
+        width: 80%;
         border: none;
         background-color: rgba(0, 0, 0, 0.6);
         height: 2rem;
@@ -62,7 +82,11 @@
         color: white;
         font-size: 1rem;
         @include tablet{
-            width: 40%
+            width: 70%
+        }
+
+        @include movil{
+            width: 80%;
         }
     }
     
@@ -92,7 +116,11 @@
         }
 
         @include tablet{
-            width: 40%;
+            width: 70%;
+        }
+
+        @include movil{
+            width: 80%;
         }
     }
     
