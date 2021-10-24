@@ -26,7 +26,7 @@
             }
         }
 
-
+        //Animacion para el Titulo principal
         &--backInRight {
             -webkit-animation-name: backInRight;
             animation-name: backInRight;
@@ -61,11 +61,6 @@
     }
 }
 
-@keyframes logoAnimate {
-    from { }
-    to {
-        transform: translate(100%)
-    }
-}
+
 
 /*-----------------------------------*/

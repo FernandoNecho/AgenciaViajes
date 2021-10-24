@@ -5,6 +5,7 @@
           box-sizing: border-box;
 }
 
+/*-----Medias Queries------*/
 /*---Titulos---*/
 .title, h1, h2, h3, h4 {
   background-color: #1ab3ab;
@@ -136,24 +137,6 @@ h4 {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes logoAnimate {
-  from {
-  }
-  to {
-    -webkit-transform: translate(100%);
-            transform: translate(100%);
-  }
-}
-
-@keyframes logoAnimate {
-  from {
-  }
-  to {
-    -webkit-transform: translate(100%);
-            transform: translate(100%);
   }
 }
 
@@ -292,6 +275,9 @@ h4 {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-line-pack: center;
       align-content: center;
   border: 1px solid transparent;
@@ -388,8 +374,6 @@ h4 {
           flex-direction: column;
   overflow: hidden;
   border: 1px solid black;
-  -webkit-box-shadow: 0 10px 10px 0 black;
-          box-shadow: 0 10px 10px 0 black;
   position: relative;
   margin: 1%;
 }
@@ -624,6 +608,8 @@ h4 {
   height: 100vh;
 }
 
+/*------------------------------------*/
+/*--------Formulario de contacto-----*/
 .gridContacto {
   display: -ms-grid;
   display: grid;
@@ -684,7 +670,7 @@ h4 {
           align-items: center;
 }
 
-form {
+.form {
   width: 100%;
 }
 
@@ -1123,6 +1109,10 @@ form {
           align-items: center;
 }
 
+.we__infoNosotros--frase {
+  color: black;
+}
+
 .we__parrafoInfo {
   color: black;
   width: 100%;
@@ -1141,7 +1131,7 @@ form {
   }
 }
 
-#valores {
+.valores {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (30%)[3];
@@ -1151,12 +1141,12 @@ form {
   text-align: center;
 }
 
-#valores__icon {
-  font-size: 1.2rem;
+.valores__icon {
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 768px) {
-  #valores {
+  .valores {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
@@ -1254,11 +1244,15 @@ form {
 
 .info__art--btn {
   background-color: #1ab3ab;
-  color: white;
   width: 80%;
   padding: .5rem;
   border-radius: 10rem;
   text-align: center;
+}
+
+.info__art--btn a {
+  text-decoration: none;
+  color: white;
 }
 
 .info__art--btn:hover {

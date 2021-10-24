@@ -69,6 +69,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
     align-content: center;
     border: 1px solid transparent;
     &__img{
@@ -85,8 +86,6 @@
         }
     }
       
-    
-
     @include tablet{
         display: flex;
         flex-direction: column;   
@@ -121,7 +120,7 @@
         flex-direction: column; 
         overflow: hidden;
         border: 1px solid black;
-        box-shadow: 0 10px 10px 0 black;
+        //box-shadow: 0 10px 10px 0 black;
         position: relative;
         margin: 1%;
 

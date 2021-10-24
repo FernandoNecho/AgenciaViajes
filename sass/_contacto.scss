@@ -1,3 +1,5 @@
+/*------------------------------------*/
+/*--------Formulario de contacto-----*/
 .gridContacto{
     display: grid;
     grid-template-areas: "header"
@@ -7,6 +9,8 @@
     grid-template-columns: 100%;
                          
 }
+
+//disposicion del formulario 2 columnas
 #frmContacto{
     grid-area: mainForm;
   
@@ -16,6 +20,7 @@
     background-image: url('../img/alpesSuizos.jpg');
     background-position: center;
     background-size: cover;
+
     @include tablet{
         grid-template-columns: 100%;
     }
@@ -23,6 +28,7 @@
     @include movil{
         grid-template-columns: 100%;
     }
+
 }
 
 .font{
@@ -32,6 +38,7 @@
     text-align: center;
     font-style: italic;
 }
+
 .formulario{
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
@@ -39,10 +46,11 @@
     justify-content: center;
     align-items: center;
 }
-form{
-    width: 100%;
-}
+
+//estilos primer columna Formulario
 .form{
+    width: 100%;
+
     &__label{
         display: flex;
         justify-content: center;
@@ -150,6 +158,7 @@ form{
     }   
 }
 
+//estilos segunda columna
 .contact{
     
     background-color: rgba(255, 255, 255, 0.8);

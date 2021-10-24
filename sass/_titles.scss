@@ -1,4 +1,5 @@
     /*---Titulos---*/
+    //Clase para los titulos que espues heredan con @extend
     .title{
         background-color: $bc-primary;
         color: $c-primary;
@@ -11,6 +12,7 @@
         padding: 1rem 0 !important;
     }
 
+    //Clase para la primer letra de los titulos H1 y H4
     .letter{
         letter-spacing: 1rem;
         background-color: transparent;
@@ -21,6 +23,7 @@
         }
     }
 
+    //se aplican las clases(title y letter) a los titulos
     @for $i from 1 to 5 {
         h#{$i}{//estilos para todos los title Hx;
             @extend .title;

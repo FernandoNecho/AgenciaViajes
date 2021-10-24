@@ -37,6 +37,10 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;  
+
+        &--frase{
+            color: black;
+        }
     }
 
     &__parrafoInfo{   
@@ -56,14 +60,14 @@
 
 }
 
-#valores{
+.valores{
     display: grid;
     grid-template-columns: repeat(3,30%);
     justify-content: space-around;
     text-align: center;
 
     &__icon{
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     @include tablet{
@@ -142,11 +146,15 @@
 
         &--btn{
             background-color: $bc-primary;
-            color: white;
+            
             width: 80%;
             padding: .5rem;
             border-radius: 10rem;
             text-align: center;
+            a{
+                text-decoration: none;
+                color: $c-primary;
+            }
             
 
             &:hover{
