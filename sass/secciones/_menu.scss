@@ -2,6 +2,12 @@
 #navbarNav{
     justify-content: center;
 }
+
+.navbar>.container-fluid{
+    justify-content: flex-end;
+    margin-right: 1%;
+}
+
 .navbar{
     grid-area: nav;
     position: sticky !important;
@@ -11,7 +17,11 @@
     border-top: 1px solid gray;
     border-bottom: 2px solid gray;
     background-color: $bc-secundary!important;
-
+    
+    @include tablet{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
     &__ul{
         list-style: none;
         display: flex;
@@ -35,7 +45,7 @@
         font-family: $font-secundary;
         text-decoration: none;
         padding: .2rem .3rem;
-        font-style: italic;
+        
         font-size: 1.2rem;
         @include movilS{
             font-size: 1.2rem;

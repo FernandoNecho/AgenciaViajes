@@ -19,7 +19,7 @@
         &::first-letter{
         background-color: orangered;
         font-size: 100%;
-        padding-left: 10px;
+        padding-left: 1rem;
         }
     }
 
@@ -29,11 +29,15 @@
             @extend .title;
 
             @if $i>1 and $i<4{              
-                font-size: 1.5rem;                
+                font-size: 1.3rem;   
+                font-family: $font-secundary;   
+                font-weight: 400;  
+                letter-spacing: 0;       
 
             }@else{
                 @extend .letter;
                 font-size: 2.5rem;
+                
             }
             
         }

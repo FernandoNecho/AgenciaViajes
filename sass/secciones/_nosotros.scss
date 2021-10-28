@@ -60,6 +60,52 @@
 
 }
 
+.cardNos{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 60vh;
+    
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include movil{
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+        width: 100%;
+        padding-top: 2rem;
+    }
+    
+    &--picture{
+        width: 50%;
+        height: auto;
+        object-position: center start;
+        object-fit: cover;
+        @include movil{
+            width: 90%;
+        }
+    }
+
+    &__presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    &--title{
+        width: 100%;
+    }
+
+    &__text{
+        font-family: $font-secundary;
+    }
+}
+
+
 .valores{
     display: grid;
     grid-template-columns: repeat(3,30%);
@@ -68,6 +114,11 @@
 
     &__icon{
         font-size: 1.6rem;
+    }
+
+    p{
+        padding: 0 .5rem;
+        font-family: $font-secundary;
     }
 
     @include tablet{
@@ -173,3 +224,4 @@
 
 
 /*----------------------------------------------*/
+

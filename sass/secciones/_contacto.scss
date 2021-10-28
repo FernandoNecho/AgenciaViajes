@@ -36,7 +36,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     text-align: center;
-    font-style: italic;
+    
 }
 
 .formulario{
@@ -58,6 +58,10 @@
         text-align: center;
         color: white;
         font-size: 1.2rem;
+
+        @include tablet{
+            font-size: 1rem;
+        }
     }
 
     &__subtitle{
@@ -66,6 +70,8 @@
         
         &::first-letter{
             background-color: orangered;
+            padding-left: 1rem;
+            letter-spacing: .4rem;
         }
         @include movil{
             text-align: center;
@@ -104,7 +110,7 @@
 
     &__terminos{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-bottom: 1rem;
 
         @include tablet{
@@ -150,10 +156,13 @@
         
         &--btn{
             padding: .5rem;
-            font-family: $font-primary;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: .2rem;
+            font-family: $font-secundary;
+            font-size: 1rem;
+            font-weight: 400;
+
+            &:hover{
+                background-color: rgb(161, 161, 161);
+            }
         }
     }   
 }
@@ -165,19 +174,24 @@
     color: black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,20%);
+    grid-template-rows: repeat(4,10%) 50%;
+    align-items: start;   
 
-    align-items: center;
-    
     padding: 0 1rem;
+
+    @include tablet{
+        padding: 0;
+        grid-template-rows: 16% repeat(3,12%) 48%;
+        height: 80vh;
+    }
     h2{
         text-align: center;
         text-decoration-line:underline;
         background-color: transparent;
         color: black;
 
-        @include tablet{
-            margin-top: 1.8rem;
+        @include movil{
+            font-size: 1rem;
         }
         &::first-letter{
             background-color: orangered;
@@ -185,5 +199,18 @@
     }
     span{
         @extend .font;
+        @include movil{
+            font-size: 1rem;
+        }
+    }
+
+    &__maps{
+        width: 90%;
+        height: 100%;
+        justify-self: center;
+
+        @include tablet{
+            height: 90%;
+        }
     }
 }
