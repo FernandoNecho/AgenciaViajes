@@ -154,13 +154,6 @@ h4 {
           justify-content: center;
 }
 
-.navbar > .container-fluid {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 1%;
-}
-
 .navbar {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -172,6 +165,13 @@ h4 {
   border-top: 1px solid gray;
   border-bottom: 2px solid gray;
   background-color: #23dfd5 !important;
+}
+
+.navbar .container-fluid {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 1%;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,7 +226,7 @@ h4 {
   }
 }
 
-/*-------------------------------*/
+/*-------------Fin Menu------------------*/
 /*------------------------------------------------------------*/
 /*-----------------------Index.html---------------------------*/
 /*------------------------------------------------------------*/
@@ -239,25 +239,9 @@ h4 {
       grid-template-columns: 100%;
 }
 
-@media screen and (max-width: 864px) {
-  #gridIndex {
-        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "acordeon" "sliderCard" "footer";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #gridIndex {
-        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "acordeon" "sliderCard" "footer";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-}
-
-/*------------------------------------*/
-/*---------Slider y slider Card----------*/
-/*------------------------------------*/
+/*-------------------------------------------------*/
+/*---------Slider principal y slider Card----------*/
+/*-------------------------------------------------*/
 .principal {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -307,8 +291,13 @@ h4 {
   color: white;
 }
 
+.acordeon--collapse {
+  width: 100%;
+}
+
 .acordeon--text {
   font-family: "Roboto", sans-serif;
+  width: 100% !important;
 }
 
 .d-block {
@@ -980,6 +969,7 @@ h4 {
 
 .mainPromo--titlePromo {
   background-color: #23dfd5;
+  font-weight: 400;
 }
 
 .card {
@@ -1144,8 +1134,13 @@ h4 {
 }
 
 .asideMenu__subMenu a:hover {
-  border: 3px solid gray;
-  border-radius: 30% 5% 30%;
+  color: gray;
+}
+
+.asideMenu__subMenu a:hover i {
+  color: gray;
+  -webkit-transform: scale(1.4, 1.4);
+          transform: scale(1.4, 1.4);
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -1318,6 +1313,7 @@ h4 {
   }
 }
 
+/*----------------Fin estilos Nosotros.........*/
 /*----------------------------------------------*/
 /*------------Estilos pagina Argentina----------*/
 /*----------------------------------------------*/
@@ -1428,7 +1424,7 @@ h4 {
   cursor: pointer;
 }
 
-/*----------------------------------------------*/
+/*-----------Fin estilos pag Argentina--------------------*/
 /*---------FOOTER-------*/
 .gridFooter {
   -ms-grid-row: 4;
@@ -1464,6 +1460,21 @@ h4 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: titulo;
+  font-size: 2rem;
+  font-family: "Amatic SC", "Times New Roman";
+  font-weight: 700;
+  letter-spacing: .4rem;
+}
+
+.gridFooter__subTitle::first-letter {
+  background-color: orangered;
+  padding-left: .3rem;
+}
+
+@media screen and (max-width: 426px) {
+  .gridFooter__subTitle {
+    font-size: 1.6rem;
+  }
 }
 
 .gridFooter__contacto {

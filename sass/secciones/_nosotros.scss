@@ -59,7 +59,7 @@
     }
 
 }
-
+    //Imagen y texto de las personas
 .cardNos{
     display: flex;
     flex-direction: row;
@@ -125,7 +125,7 @@
         grid-template-columns: 100%;
     }
 }
-
+/*----------------Fin estilos Nosotros.........*/
 
 /*----------------------------------------------*/
 /*------------Estilos pagina Argentina----------*/
@@ -139,14 +139,11 @@
 .previaje{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    
+    justify-content: center; 
 
     &__pres{
         width: 100%;
         background-color: $bc-secundary;
-
 
         p{
             font-family: $font-secundary;  
@@ -168,7 +165,7 @@
 
 .info{
     display: grid;
-    grid-template-columns: repeat(3,30%);
+    grid-template-columns: repeat(3, 30%);
     margin: 1rem 0;
     justify-content: center;
 
@@ -217,11 +214,6 @@
     }
     
 }
-    
 
-
-
-
-
-/*----------------------------------------------*/
+/*-----------Fin estilos pag Argentina--------------------*/
 

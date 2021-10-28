@@ -16,39 +16,15 @@
 
     grid-template-columns: 100%;
 
-    @include landscape{
-        grid-template-areas: "header"
-                             "nav"
-                             "sliderMain"
-                             "sectionPromo"
-                             "acordeon"
-                             "sliderCard"
-                             "footer";
-        grid-template-columns: 100%;
-        
-    }
-
-    @include tablet{
-        grid-template-areas: "header"
-                             "nav"
-                             "sliderMain"
-                             "sectionPromo"
-                             "acordeon"
-                             "sliderCard"
-                             "footer";
-        grid-template-columns: 100%;
-        
-    }
+   
 
 }
-
-
  
 
 
-/*------------------------------------*/
-/*---------Slider y slider Card----------*/
-/*------------------------------------*/
+/*-------------------------------------------------*/
+/*---------Slider principal y slider Card----------*/
+/*-------------------------------------------------*/
 .principal{
     grid-area: sliderMain;
 }
@@ -86,9 +62,12 @@
                 
             }
     }
-
+    &--collapse{
+        width: 100%;
+    }
     &--text{
         font-family: $font-secundary;
+        width: 100% !important;
     }
 }
 //Clase del Slider Principal para ajustar Imagen

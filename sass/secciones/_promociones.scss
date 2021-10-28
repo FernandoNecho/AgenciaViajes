@@ -27,7 +27,7 @@
     grid-area: main;
     &--titlePromo{
         background-color: $bc-secundary;
-       
+        font-weight: 400;
     }
 }
 
@@ -155,11 +155,14 @@
             @include tablet{
                 font-size: 1rem;
             }
+ 
+            &:hover {
+                color: gray;
+            }
 
-            &:hover{
-    
-                border: 3px solid gray;
-                border-radius: 30% 5% 30%;
+            &:hover i{
+                color: gray;
+                transform: scale(1.4, 1.4);
             }
         }
     }
