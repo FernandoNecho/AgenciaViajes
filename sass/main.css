@@ -234,14 +234,14 @@ h4 {
   background-color: rgba(170, 168, 168, 0.171);
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "header" "nav " "sliderMain"  "sectionPromo" "sliderCard" "footer";
+      grid-template-areas: "header" "nav " "sliderMain"  "sectionPromo" "acordeon" "sliderCard" "footer";
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
 }
 
 @media screen and (max-width: 864px) {
   #gridIndex {
-        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "sliderCard" "footer";
+        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "acordeon" "sliderCard" "footer";
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
@@ -249,7 +249,7 @@ h4 {
 
 @media screen and (max-width: 768px) {
   #gridIndex {
-        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "sliderCard" "footer";
+        grid-template-areas: "header" "nav" "sliderMain" "sectionPromo" "acordeon" "sliderCard" "footer";
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
@@ -264,6 +264,53 @@ h4 {
   grid-area: sliderMain;
 }
 
+.acordeon {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: acordeon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  padding: .4rem 0;
+}
+
+.acordeon h2 {
+  width: 100%;
+}
+
+.acordeon__btn {
+  color: white;
+  background-color: #1ab3ab;
+  width: 100%;
+  margin: 0px 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: none;
+  padding: 0;
+  padding: .4rem;
+  border-bottom: 1px solid gray;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.acordeon__btn:hover {
+  color: white;
+}
+
+.acordeon--text {
+  font-family: "Roboto", sans-serif;
+}
+
 .d-block {
   width: 100% !important;
   height: 80vh !important;
@@ -276,14 +323,14 @@ h4 {
 }
 
 .sliderCard {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: sliderCard;
 }
 
 @media screen and (max-width: 864px) {
   .sliderCard {
-    -ms-grid-row: 5;
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
     grid-area: sliderCard;
     display: none;
@@ -292,7 +339,7 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .sliderCard {
-    -ms-grid-row: 5;
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
     grid-area: sliderCard;
     display: none;
@@ -326,6 +373,7 @@ h4 {
 
 /*--------------------------------*/
 /*--------SECCION PROMOCIONES----*/
+/*--------------------------------*/
 .promo {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -426,7 +474,6 @@ h4 {
 .promo .card__body--title {
   width: 100%;
   padding: 0.3rem 1rem !important;
-  border-radius: 1rem;
 }
 
 .promo .card__body p {
@@ -490,6 +537,7 @@ h4 {
 
 /*-------------------------------------*/
 /*----------Ventana Modal compra-------*/
+/*-------------------------------------*/
 .buyModal {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
