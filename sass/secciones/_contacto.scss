@@ -60,7 +60,7 @@
         font-size: 1.2rem;
 
         @include tablet{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -190,18 +190,13 @@
         background-color: transparent;
         color: black;
 
-        @include movil{
-            font-size: 1rem;
-        }
+
         &::first-letter{
             background-color: orangered;
         }
     }
     span{
         @extend .font;
-        @include movil{
-            font-size: 1rem;
-        }
     }
 
     &__maps{

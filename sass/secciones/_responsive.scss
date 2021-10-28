@@ -1,4 +1,10 @@
 /*-----Medias Queries------*/
+@mixin landscape {
+    //Smartphone en modo Horizontal
+    @media screen and(max-width:864px){
+       @content; 
+    }
+}
 @mixin tablet {
     @media screen and(max-width:768px){
        @content; 

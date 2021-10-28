@@ -8,19 +8,30 @@
     display: grid;
     grid-template-areas: "header"
                          "nav "
-                         "main" 
-                         "section"
-                         "aside"
+                         "sliderMain" 
+                         "sectionPromo"
+                         "sliderCard"
                          "footer";
 
     grid-template-columns: 100%;
 
+    @include landscape{
+        grid-template-areas: "header"
+                             "nav"
+                             "sliderMain"
+                             "sectionPromo"
+                             "sliderCard"
+                             "footer";
+        grid-template-columns: 100%;
+        
+    }
+
     @include tablet{
         grid-template-areas: "header"
                              "nav"
-                             "slider"
-                             "aside"
-                             "section"
+                             "sliderMain"
+                             "sectionPromo"
+                             "sliderCard"
                              "footer";
         grid-template-columns: 100%;
         
@@ -36,13 +47,10 @@
 /*---------Slider y slider Card----------*/
 /*------------------------------------*/
 .principal{
-    grid-area: main;
-    @include tablet{
-        grid-area: slider !important;
-    }
+    grid-area: sliderMain;
 }
 
-
+//Clase del Slider Principal para ajustar Imagen
 .d-block{
     width: 100% !important;
     height: 80vh !important;
@@ -53,9 +61,14 @@
 }
 
 .sliderCard{
-    grid-area: aside;
+    grid-area: sliderCard;
 
+    @include landscape{
+        grid-area: sliderCard;
+        display: none;
+    }
     @include tablet{
+        grid-area: sliderCard;
         display: none;
     }
 
@@ -78,19 +91,26 @@
 /*--------------------------------*/
 /*--------SECCION PROMOCIONES----*/
 .promo{
-    grid-area: section;
-    width: 100%;
+    grid-area: sectionPromo;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     row-gap: 1.4rem;
     background-color: rgba(170, 168, 168, 0.171);
-    padding-bottom: 1rem;
-
-    @include tablet{    
+    padding-bottom: 1rem;  
+    
+    @include landscape{
+        grid-area: sectionPromo;  
         grid-template-columns: repeat(2, 1fr); 
-             
+        width: 100%;
     }
+
+    @include tablet{  
+        grid-area: sectionPromo;  
+        grid-template-columns: repeat(2, 1fr); 
+        width: 100%;    
+    }
+
 
     @include movil{
         width: 100%;
@@ -163,7 +183,11 @@
         color:$c-primary;
         text-align: center;
         background-color: $bc-primary;
-        
+
+        @include landscape{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
 
         @include tablet{
             grid-column-start: 1;
