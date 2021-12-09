@@ -1,5 +1,15 @@
 class cardPay{
-    constructor(firstName, lastName, numberCredit, own, expiration, codSeguridad, cuotas, precioHotel, precioAereo, pasajeros){
+    constructor( cuotas, precioHotel, precioAereo, pasajeros,opcion){
+        this.cuotas = cuotas;    
+        this.precioHotel = precioHotel;
+        this.precioAereo = precioAereo;
+        this.pasajeros = pasajeros;
+        this.opcion = opcion;
+    }
+
+    //constructor con iteraccion con el DOM
+
+    /*constructor(firstName, lastName, numberCredit, own, expiration, codSeguridad, cuotas, precioHotel, precioAereo, pasajeros, opcion){
         this.firstName= firstName;
         this.lastName= lastName;
         this.numberCredit= numberCredit;
@@ -10,7 +20,9 @@ class cardPay{
         this.precioHotel = precioHotel;
         this.precioAereo = precioAereo;
         this.pasajeros = pasajeros;
-    }
+
+        this.opcion = opcion;
+    }*/
 
     //metodo CalcularViaje
     calcularViaje(){
@@ -26,15 +38,11 @@ class cardPay{
         
         
         precio+= precio*impuestos;
- 
+
         switch (this.cuotas){
             case 1:{
                 precioFinal=precio;
-                document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
+                alert("El precio final por todo su viaje es de: $"+ precioFinal + "\n El valor de cada cuota es: $" + precioCuotas+ "\n Precio Hotel: $" + this.precioHotel+ "\n Precio del Aereo: $"+ this.precioAereo+ "\n los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
                 break;
             }
                
@@ -43,11 +51,7 @@ class cardPay{
                 precioCuotas = (precioFinal/3).toFixed(2);
                 let response = confirm("El precio de las cuotas es de: $"+ precioCuotas + " desea continuar?");
                 if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
+                    alert("El precio final por todo su viaje es de: $"+ precioFinal + "\n El valor de cada cuota es: $" + precioCuotas+ "\n Precio Hotel: $" + this.precioHotel+ "\n Precio del Aereo: $"+ this.precioAereo+ "\n los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
                 }
                 else
                     preCarga();
@@ -60,11 +64,7 @@ class cardPay{
                 precioCuotas = (precioFinal/6).toFixed(2);
                 let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?");
                 if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
+                    alert("El precio final por todo su viaje es de: $"+ precioFinal + "\n El valor de cada cuota es: $" + precioCuotas+ "\n Precio Hotel: $" + this.precioHotel+ "\n Precio del Aereo: $"+ this.precioAereo+ "\n los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
                 }
                 else
                     preCarga();
@@ -77,11 +77,7 @@ class cardPay{
                 precioCuotas = (precioFinal/9).toFixed(2);
                 let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?")
                 if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
+                    alert("El precio final por todo su viaje es de: $"+ precioFinal + "\n El valor de cada cuota es: $" + precioCuotas+ "\n Precio Hotel: $" + this.precioHotel+ "\n Precio del Aereo: $"+ this.precioAereo+ "\n los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
                 }
                 else
                     preCarga();
@@ -94,11 +90,8 @@ class cardPay{
                 precioCuotas = (precioFinal/12).toFixed(2);
                 let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?")
                 if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
+                    
+                    alert("El precio final por todo su viaje es de: $"+ precioFinal + "\n El valor de cada cuota es: $" + precioCuotas+ "\n Precio Hotel: $" + this.precioHotel+ "\n Precio del Aereo: $"+ this.precioAereo+ "\n los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
                 }
                 else
                     preCarga();
@@ -139,16 +132,8 @@ class cardPay{
         if(aprobado)
             alert("Todo listo - que disfrute su viaje")
     }
-}
 
-class facturacionViaje{
-    constructor(precioHotel, precioAereo, pasajeros, cuotas, opcion){
-        this.precioHotel = precioHotel;
-        this.precioAereo = precioAereo;
-        this.pasajeros = pasajeros;
-        this.cuotas = cuotas;
-        this.opcion = opcion;
-    }
+    //metodos para usar con el prompt
 
     //metodo opcion
     destino(){
@@ -187,106 +172,18 @@ class facturacionViaje{
             }
         }
     }
-    
-    //metodo CalcularViaje
-    calcularViaje(){
-        let precioFinal = 0;
-        let precio= 0;
-        let precioCuotas= 0;
-        const impuestos = 0.21
-        
-        precio = this.precioHotel + (this.precioAereo*this.pasajeros);
-        precio+= precio*impuestos;
-        
-        switch (this.cuotas){
-            case 1:{
-                precioFinal=precio;
-                document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
-                break;
-            }
-               
-           case 3:{
-                precioFinal = precio + precio*0,1;
-                precioCuotas = (precioFinal/3).toFixed(2);
-                let response = confirm("El precio de las cuotas es de: $"+ precioCuotas + " desea continuar?");
-                if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
-                }
-                else
-                    preCarga();
-    
-                break;
-           }
-           
-           case 6:{
-                precioFinal = precio + precio*0,2;
-                precioCuotas = (precioFinal/6).toFixed(2);
-                let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?");
-                if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
-                }
-                else
-                    preCarga();
-    
-                break;
-           }
-    
-           case 9:{
-                precioFinal = precio + precio*0,3;
-                precioCuotas = (precioFinal/9).toFixed(2);
-                let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?")
-                if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
-                }
-                else
-                    preCarga();
-    
-                break;
-           }
-    
-           case 12:{
-                precioFinal = precio + precio*0,4;
-                precioCuotas = (precioFinal/12).toFixed(2);
-                let response = confirm("El precio de las cuotas es de: $"+ precioCuotas+ " desea continuar?")
-                if(response){
-                    document.write("El precio final por todo su viaje es de: $"+ precioFinal + "<br>");              
-                    document.write("El valor de cada cuota es: $" + precioCuotas+ "<br>")
-                    document.write("Precio Hotel: $" + this.precioHotel+ "<br>");
-                    document.write("Prcio del Aereo: $"+ this.precioAereo+ "<br>");
-                    document.write("los calculos fueron hechos en base a la siguiente cantidad de pasajeros: " +this.pasajeros);
-                }
-                else
-                    preCarga();
-    
-                break;
-           }
-        }
-    }
 }
 
 
+
 function preCarga(){
-    let opcion = (window.prompt("Ingrese una opcion")).toUpperCase();
+    let opcion = (window.prompt("Ingrese una opcion entre: - [A - B - C - D]")).toUpperCase();
     let pasajeros = parseInt( window.prompt("Ingrese cantidad de pasajeros"));
     let cuotas = parseInt( window.prompt("Ingrese la cantidad de cuotas 1/3/6/9/12"));
+    
     let precioHotel = 0;
     let precioAereo = 0;
-    let Factura = new facturacionViaje(precioHotel, precioAereo, pasajeros, cuotas, opcion);
+    //let Factura = new cardPay(firstName, lastName, numberCredit, own, expiration, codSeguridad, cuotas, precioHotel, precioAereo, pasajeros,opcion);
+    let Factura = new cardPay( cuotas, precioHotel, precioAereo, pasajeros,opcion);
     Factura.destino();
 }
