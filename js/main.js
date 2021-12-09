@@ -227,7 +227,7 @@ function preCarga(){
     let cuotas = parseInt( window.prompt("Ingrese la cantidad de cuotas 1/3/6/9/12"));
     
     if(cuotas!=1 && cuotas!==3 && cuotas!==6 && cuotas!==9 && cuotas!==12){
-        alert("Ingreso una opcion incorrecta, las opciones son[1-3-6-9-12]aaa");
+        alert("Ingreso una opcion incorrecta, las opciones son[1-3-6-9-12]");
         preCarga();
     }
     //let Factura = new cardPay(firstName, lastName, numberCredit, own, expiration, codSeguridad, cuotas, precioHotel, precioAereo, pasajeros,opcion);
