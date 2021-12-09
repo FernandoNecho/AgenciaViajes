@@ -296,7 +296,7 @@
         <div class="card-body card__body">
           <h2 class="card-title card__body--title ">Sudafrica</h2>
           <p class="card-text">Hotel Gran Bahia + All Inclusive +  9 noches, 2 personas todo por: </p><p><b>$83.200.</b></p>
-          <a href="#buyModal" class="btn card__btnCompra">Comprar</a>
+          <a href="#buyModal" class="btn card__btnCompra" onclick="preCarga()">Comprar</a>
         </div>
       </div>
       
@@ -311,6 +311,10 @@
             <input type="text" id="firstName" placeholder="Nombre">
             <label for="lastName">Apellido</label>
             <input type="text" id="lastName" placeholder="Apellido">
+            <label for="cuotas">Cuotas</label>
+            <input type="number" id="cuotas" placeholder="cantidad de cuotas">
+            <label for="pasajeros">Cuotas</label>
+            <input type="number" id="pasajeros" placeholder="cantidad de personas">
   
             <fieldset class="buyModal__frmCard">
               <legend>Datos de la tarjeta</legend>
@@ -413,6 +417,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
 
