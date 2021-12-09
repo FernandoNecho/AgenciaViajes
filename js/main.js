@@ -1,3 +1,33 @@
+//Preproyecto 1
+
+//array de objetos
+let listaPrecios = [
+    {
+        id: 1,
+        precioHotel: 12000,
+        precioAereo: 60000
+    },
+
+    {
+        id: 2,
+        precioHotel: 220000,
+        precioAereo: 80000
+    },
+
+    {
+        id: 3,
+        precioHotel: 12000,
+        precioAereo: 5000
+    },
+
+    {
+        id: 4,
+        precioHotel: 180000,
+        precioAereo: 30000
+    }
+];
+
+
 class cardPay{
     constructor( cuotas, precioHotel, precioAereo, pasajeros,opcion){
         this.cuotas = cuotas;    
@@ -98,6 +128,11 @@ class cardPay{
     
                 break;
            }
+
+           default:{
+            alert("Ingreso un opcion incorrecta, las cuotas son [1-3-6-9-12]");
+            preCarga();
+        }
         }
     }
 
@@ -139,35 +174,27 @@ class cardPay{
     destino(){
         
         switch (this.opcion){
-            case "A":{
-                this.precioHotel = 120000;
-                this.precioAereo = 60000;
+            case 1:{
                 this.calcularViaje();  
                 break;       
             }
     
-            case "B":{
-                this.precioHotel = 220000;
-                this.precioAereo = 80000;
+            case 2:{
                 this.calcularViaje();
                 break;
             }
     
-            case "C":{
-                this.precioHotel = 12000;
-                this.precioAereo = 5000; 
+            case 3:{
                 this.calcularViaje();
                 break;
             }
     
-            case "D":{
-                this.precioHotel = 180000;
-                this.precioAereo = 30000; 
+            case 4:{ 
                 this.calcularViaje();
                 break;
             }
             default:{
-                alert("Ingreso una opcion incorrecta");
+                alert("Ingreso una opcion incorrecta, las opciones son[1-2-3-4]");
                 preCarga();
             }
         }
@@ -177,13 +204,33 @@ class cardPay{
 
 
 function preCarga(){
-    let opcion = (window.prompt("Ingrese una opcion entre: - [A - B - C - D]")).toUpperCase();
+    let opcion = parseInt(window.prompt("Ingrese una opcion entre: [1 - 2 - 3 - 4]"));
+
+    if(opcion<1 || opcion>4){
+        alert("Ingreso una opcion incorrecta, las opciones son[1-2-3-4]");
+        preCarga();
+    }
+
+    let id=null;
+    let precioHotel = 0;
+    let precioAereo = 0;
+    for (const e of listaPrecios) {
+        if(e.id===opcion){
+            id = e.id;
+            precioHotel = e.precioHotel;
+            precioAereo = e.precioAereo;
+        }
+
+    }
+
     let pasajeros = parseInt( window.prompt("Ingrese cantidad de pasajeros"));
     let cuotas = parseInt( window.prompt("Ingrese la cantidad de cuotas 1/3/6/9/12"));
     
-    let precioHotel = 0;
-    let precioAereo = 0;
+    if(cuotas!=1 && cuotas!==3 && cuotas!==6 && cuotas!==9 && cuotas!==12){
+        alert("Ingreso una opcion incorrecta, las opciones son[1-3-6-9-12]aaa");
+        preCarga();
+    }
     //let Factura = new cardPay(firstName, lastName, numberCredit, own, expiration, codSeguridad, cuotas, precioHotel, precioAereo, pasajeros,opcion);
-    let Factura = new cardPay( cuotas, precioHotel, precioAereo, pasajeros,opcion);
+    let Factura = new cardPay( cuotas, precioHotel, precioAereo, pasajeros,id);
     Factura.destino();
 }
