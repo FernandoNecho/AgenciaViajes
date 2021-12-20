@@ -222,24 +222,19 @@
 /*-------------------------------------*/
 .buyModal{
     background-color: rgba(0,0,0,.8);
-    position:fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    opacity:0;
+    
+    opacity:1;
     pointer-events:none;
-    transition: all 1s;
-    z-index: 99999 !important;
+    
     &__contenido{
     
         background-color:$c-primary;
         border:1px solid black;
-        width:50%;
-        height: 100vh;
+        width:95%;
+        
         padding: 10px 20px;
         margin: 1% auto;
-        position: relative;
+        
         z-index: 9999 !important;
         @include tablet{
             width: 80vw;
@@ -248,18 +243,30 @@
             width: 90vw;
         }
         
-    }
-
-    &--cerrar{
-        text-decoration: none;
-        color: $c-primary;
-        background-color: black; 
-        padding: 0 .4rem;
-        border: 1px solid black;
-        border-radius: 50%;
-        &:hover{
-            color: black;
-            background-color: $c-primary;
+        #viaje{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            
+            @include movil{
+                flex-direction: column;
+            }
+            #destino{
+                background-color: black;
+                margin-bottom: 0;
+                padding: .4rem !important;
+            }
+            #descripcion{
+                font-size: 1.4rem;
+                @include movil{
+                    font-size: 1rem;
+                }
+            }
         }
     }
 
@@ -278,6 +285,29 @@
         }
     }
 
+    &__frmCuotas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        margin: 1rem 0 4rem 0;
+        padding: 1rem 0;
+
+        #priceCuotas{
+            font-size: 1.2rem;
+        }
+
+        @include movil{
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+            #priceCuotas{
+                font-size: 1rem;
+            }
+        }
+        
+    }
     &__frmCard{
         display: flex;
         flex-direction: column;
@@ -292,6 +322,12 @@
             font-family: $font-primary;
             font-size: 2rem;
             font-weight: 700;
+            background-color: $bc-primary;
+            padding: 1rem;
+        }
+        #price{
+            font-family: $font-secundary;
+            font-size: 1rem;
         }
         &--btnModal{
             width: 100%;
@@ -303,10 +339,10 @@
   
 }
 
-#buyModal:target{
+/*#buyModal:target{
     opacity:1;
     pointer-events:auto;
-}
+}*/
 
 
 

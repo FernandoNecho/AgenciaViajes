@@ -529,26 +529,16 @@ h4 {
 /*-------------------------------------*/
 .buyModal {
   background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  z-index: 99999 !important;
 }
 
 .buyModal__contenido {
   background-color: white;
   border: 1px solid black;
-  width: 50%;
-  height: 100vh;
+  width: 95%;
   padding: 10px 20px;
   margin: 1% auto;
-  position: relative;
   z-index: 9999 !important;
 }
 
@@ -564,18 +554,49 @@ h4 {
   }
 }
 
-.buyModal--cerrar {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 0 .4rem;
-  border: 1px solid black;
-  border-radius: 50%;
+.buyModal__contenido #viaje {
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
 }
 
-.buyModal--cerrar:hover {
-  color: black;
-  background-color: white;
+@media screen and (max-width: 426px) {
+  .buyModal__contenido #viaje {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.buyModal__contenido #viaje #destino {
+  background-color: black;
+  margin-bottom: 0;
+  padding: .4rem !important;
+}
+
+.buyModal__contenido #viaje #descripcion {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 426px) {
+  .buyModal__contenido #viaje #descripcion {
+    font-size: 1rem;
+  }
 }
 
 .buyModal h2 {
@@ -601,6 +622,45 @@ h4 {
 @media screen and (max-width: 426px) {
   .buyModal__frmComprar {
     font-size: 0.8rem;
+  }
+}
+
+.buyModal__frmCuotas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 1px solid black;
+  margin: 1rem 0 4rem 0;
+  padding: 1rem 0;
+}
+
+.buyModal__frmCuotas #priceCuotas {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 426px) {
+  .buyModal__frmCuotas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    text-align: center;
+  }
+  .buyModal__frmCuotas #priceCuotas {
+    font-size: 1rem;
   }
 }
 
@@ -630,6 +690,13 @@ h4 {
   font-family: "Amatic SC", "Times New Roman";
   font-size: 2rem;
   font-weight: 700;
+  background-color: #1ab3ab;
+  padding: 1rem;
+}
+
+.buyModal__price #price {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 .buyModal__price--btnModal {
@@ -645,11 +712,10 @@ h4 {
       justify-content: space-around;
 }
 
-#buyModal:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
+/*#buyModal:target{
+    opacity:1;
+    pointer-events:auto;
+}*/
 /*--------------------------------------*/
 /*--------------page-404--------------------*/
 /*--------------------------------------*/

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Travel vas a encontrar las mejores ofertas para tus vacaciones, ademas de sentirte acompañado y respaldado por nuestro equipo de profesionales.">
+    <meta name="keywords" content="Ballenas, noroeste Argentino, cordillera, nieve, Hoteles, vuelos, turismo, hospedaje, excursiones, montañas, playas, grutas">
+
+    <title>Travel - Comprar</title>
+
+    <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../sass/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <header class="header">
+        <!--Logo y Titulo-->
+    <div class="header__logoTitle">
+      <a href="../index.html">
+        <img src="../icons/logo.svg" alt="Logo"  class="header__logoTitle--logo" >
+      </a>
+      <h1 class="header__logoTitle--title header__logoTitle--backInRight">Travel</h1>
+    </div>
+  </header>
+
+    <!-----------Menu------------------>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navGrid" >
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar__ul navbar-nav ">
+          <li class="navbar__li nav-item">
+            <a class="navbar__a nav-link" href="../index.html"><img src="../icons/homeWhite.svg" alt="Home"></a>
+          </li>
+          <li class="navbar__li nav-item">
+            <a class="navbar__a nav-link" href="./promociones.html">Promociones</a>
+          </li>
+          <li class="navbar__li nav-item">
+            <a class="navbar__a nav-link" href="#">Argentina</a>
+          </li>
+          <li class="navbar__li nav-item">
+            <a class="navbar__a nav-link" href="./nosotros.html">Nosotros</a>
+          </li>
+          <li class="navbar__li nav-item">
+            <a class="navbar__a nav-link" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      <div>
+    </div>
+  </nav>
+    <!--------------Frmulario Compra------------->
+    <div id="buyModal">       
+        <div class="buyModal__contenido">
+          <h2 >Hagamoslo!!</h2>
+
+          <div id="viaje">
+            <h3 id="destino"></h3>
+            <p id="descripcion"></p>
+          </div>
+          <form action="./page404.html" method="get" class="buyModal__frmComprar" id="formulario">
+
+            <legend>Calcula el precio de tus Cuotas</legend>
+            <fieldset class="buyModal__frmCuotas">
+              <label for="cuotas">Cuotas:</label>
+              <select name="number" id="cuotas" >
+                  <option value="1"> 1</option>
+                  <option value="3" selected>3</option>
+                  <option value="6">6</option>
+                  <option value="9">9</option>
+                  <option value="12">12</option>
+              </select>
+              <label for="pasajeros">Pasajeros:</label>
+              <input type="number" id="pasajeros" placeholder="cantidad de personas" name="pasajeros">
+              <input type="button" value="Calcular x Cuotas " id="btnCalcular" class="btn btn-dark">
+              <div id="priceCuotas"></div>
+            </fieldset>
+
+            <fieldset class="buyModal__frmCard">
+              <legend>Titular de la Reserva</legend>
+              <label for="firstName">Nombre</label>
+              <input type="text" id="firstName" placeholder="Nombre" name="firstName">
+              <label for="lastName">Apellido</label>
+              <input type="text" id="lastName" placeholder="Apellido" name="lastName">
+            </fieldset>
+            
+            <fieldset class="buyModal__frmCard">
+              <legend>Datos de la tarjeta</legend>
+              <label for="numberCredit">Numero de Tarjeta</label>
+              <input type="number" id="numberCredit" name="numberCredit">
+              <label for="own">Titular</label>
+              <input type="text" id="own" placeholder="Como figura en la tarjeta" name="own">
+              <label for="expiration">Vencimiento</label>
+              <input type="date" name="" id="expiration" name="expiration">
+              <label for="cod">Cod. Seguridad</label>
+              <input type="text" id="cod" placeholder="xyz" name="cod">
+            </fieldset>
+                      
+                      
+            <div class="buyModal__price">
+              <span><b>Tarifa Final: </b><b id="price"></b> </span><br>
+              <div class="buyModal__price--btnModal">
+                <input type="submit" value="Comprar" id="comprar" class="btn btn-dark">
+                <input type="reset" value="Reset" class="btn btn-dark">
+              </div>
+            </div>  
+          </form>
+          
+        </div>
+      </div>
+      <!-----------------Fin Formulario------------>
+      <script src="../js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
