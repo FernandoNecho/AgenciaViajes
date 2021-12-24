@@ -269,11 +269,12 @@ class cardPay extends priceTrip{
 
 
 function preCarga(){
+    const promo = JSON.parse(localStorage.getItem("promo"));
     //agrego el destino seleccionado al formulario
     let destino = document.getElementById("destino");
-    destino.textContent = localStorage.getItem("destino");
+    destino.textContent = promo.destino;
 
-    let imgStorage = localStorage.getItem("imagen");
+    let imgStorage = promo.imagen;
     let imagen = document.createElement("img");
     imagen.setAttribute("src", imgStorage);
     imagen.setAttribute('alt', 'na');
@@ -287,11 +288,11 @@ function preCarga(){
     parentDiv.insertBefore(imagen, destino.nextSibling);
 
     let precioViaje= document.createElement("b");
-    precioViaje.textContent= localStorage.getItem("precio");
+    precioViaje.textContent= promo.precio;
 
     //traigo la descripcion
     let descripcion = document.getElementById("descripcion");
-    descripcion.textContent = localStorage.getItem("descripcion");
+    descripcion.textContent = promo.descripcion;
 
     //traigo el precio ofertado en base doble de contado
     
@@ -300,7 +301,7 @@ function preCarga(){
     let calcViaje = document.getElementById("btnCalcular");
     calcViaje.addEventListener("click", calculo )
     function calculo(){
-        let index= parseInt(localStorage.getItem("id"));
+        let index= parseInt(promo.id);
         
         let opcion = parseInt(listaPrecios[index].id); 
     
