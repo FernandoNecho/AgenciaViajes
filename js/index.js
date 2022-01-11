@@ -25,5 +25,16 @@ enlace.forEach((element,key) => {
     });
 });
 
+/*---------Menu Acordeon-------*/
+//se anula el de bootstrap y se hace la logica con jquery
+
+$(()=>{
+    $('.acordeon__btn').on("click", (e)=>{
+        let tag = e.target.id;
+        $("#collapse"+tag).slideToggle("slow");
+        $(e.target).children().toggleClass("fa-arrow-up");
+    });
+});
+
 
 

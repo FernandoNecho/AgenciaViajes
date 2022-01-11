@@ -1,4 +1,3 @@
-//Preproyecto 1
 
 //array de objetos
 let listaPrecios = [
@@ -362,3 +361,5 @@ function preCarga(){
 }
 
 preCarga();
+
+
