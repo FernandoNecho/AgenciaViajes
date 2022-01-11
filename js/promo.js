@@ -104,12 +104,12 @@ $(".paquete").append(`
                 <h2 class="titleRent"><i class="fas fa-taxi"></i> Alquiler de 10 días de auto económico</h2>
                 <p>Alquiler de Auto económico Chevrolet Prisma, Renault Logan, Nissan Versa o similar. 
                     Incluye Kilometraje libre, cobertura por daños y/o robo con franquicia, responsabilidad civil, 
-                    y cargo de aeropuerto.</p><p class="hide"> Requisitos: ser mayor de 21 años, tener licencia de conducir vigente 
+                    y cargo de aeropuerto.</p><p class="hide${destino.id}" style="display: none;"> Requisitos: ser mayor de 21 años, tener licencia de conducir vigente 
                     y contar con tarjeta de crédito internacional válida a nombre del conductor designado, 
                     para el bloqueo de la franquicia por BRL. Toma y deja en Aeropuerto. Es que siempre que el auto se tome 
                     y deje en oficinas diferentes, aplican cargos extras y deberán ser abonados por el cliente directamente en destino.
                 </p>
-                <a href="#" class="btnShow">Leer mas...</a>
+                <a href="#" class="btnShow" id="${destino.id}">Leer mas...</a>
             </div>
         </div>
     </div>
@@ -163,29 +163,31 @@ $(".fa").on("click", (e)=>{
 
 //Boton mostrar mas...
 $(()=>{
-$.fn.toggleText = function(txt1, txt2){
-    if(this.text()===txt1){
-        this.text(txt2);
-    }else{
-        this.text(txt1);
+    $.fn.toggleText = function(txt1, txt2){
+        
+        if(this.text()==txt1){
+            this.text(txt2);
+            
+        }else{
+            this.text(txt1);
+        }
+        return this;
     }
-    return this;
-}
 
-$(".btnShow").css({
-    color: "#24dfd5",
-    textDecoration: "underline wavy"
-    
-}).on("click",(e)=>{
-    e.preventDefault();
-    $(".hide").slideDown("slow", ()=>{
-        $(e.target).toggleText("Leer mas...", "Leer menos...");
-    }).delay(4000).slideUp("slow", ()=>{
-        $(e.target).toggleText("Leer mas...", "Leer menos...");
-    });
-    
-    
-}); 
+    $(".btnShow").css({
+        color: "#24dfd5",
+        textDecoration: "underline wavy"
+        
+    })
+    .on("click",(e)=>{
+        e.preventDefault();
+        let id= e.target.id;
+        $(".hide"+id).slideDown("slow", ()=>{   
+            $(`#${e.target.id}`).toggleText("Leer mas...", "Leer menos...");
+        }).delay(4000).slideUp("slow", ()=>{   
+            $(`#${e.target.id}`).toggleText("Leer mas...", "Leer menos...");
+        });
+    })
 })
 
 

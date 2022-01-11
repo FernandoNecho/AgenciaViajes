@@ -1805,10 +1805,6 @@ h4 {
   font-size: 1rem;
 }
 
-.hide {
-  display: none;
-}
-
 @-webkit-keyframes sombra {
   0% {
     -webkit-box-shadow: 0 0 10px black;
