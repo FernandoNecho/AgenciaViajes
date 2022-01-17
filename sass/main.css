@@ -1849,6 +1849,11 @@ h4 {
   .container:nth-child(odd) {
     border-radius: 0%;
   }
+  .container:nth-child(2) {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
   #descripcion {
     display: -webkit-box;
     display: -ms-flexbox;

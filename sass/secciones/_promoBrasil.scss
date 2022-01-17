@@ -182,6 +182,9 @@
         border-radius: 0%;
     }
     
+    .container:nth-child(2){
+        align-items: center !important;
+    }
     #descripcion{
         display: flex;
         flex-direction: column;

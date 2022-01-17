@@ -1,0 +1,24 @@
+[{
+    "id":"1",
+    "site":"Búzios + Río de Janeiro!!",
+    "foto": "../img/iberostar.jpg",
+    "alt":"Búzios"
+},
+{
+    "id":"2",
+    "site":"Cabo Frio!!",
+    "foto": "../img/arcipelagoSanBlas.jpg",
+    "alt":"Cabo Frio"
+},
+{
+    "id":"3",
+    "site":"Salvador de Bahia!!",
+    "foto": "../img/brasil.jpg",
+    "alt":"Salvador de Bahia"
+},
+{
+    "id":"4",
+    "site":"Fortaleza!!",
+    "foto": "../img/marDelPlata.jpg",
+    "alt":"fortaleza"
+}]
