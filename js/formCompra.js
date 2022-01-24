@@ -201,6 +201,9 @@ class priceTrip{
                 */ 
                 return true;
         }else{
+            let pas = document.getElementById("pasajeros").nextElementSibling;
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requed")) return false
             //sino ingresaron cantidad de pasajeros en el form - imprimo un mensaje
             document.getElementById("pasajeros").insertAdjacentHTML("afterend", "<p class='requed'>*Debe completar este campo</p>");
             //alert("Ingrese las cuotas que desea");
@@ -238,53 +241,117 @@ class cardPay extends priceTrip{
         let aprob =0;
         const d= document;
         if(!this.firstName || typeof this.firstName!== "string"){
-           d.getElementById("firstName").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
+            let pas = document.getElementById("firstName").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
+            d.getElementById("firstName").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("debe Ingresar su Nombre");
             aprob=1;
+        }else{
+            let pas = document.getElementById("firstName").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
         
         if(!this.lastName || typeof this.lastName!== "string"){
+            let pas = document.getElementById("lastName").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("lastName").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("debe Ingresar su Apellido");
             aprob=1;
+        }else{
+            let pas = document.getElementById("lastName").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
         if(!this.email || typeof this.email!== "string"){
+            let pas = document.getElementById("email").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("email").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("debe Ingresar su Apellido");
             aprob=1;
+        }else{
+            let pas = document.getElementById("email").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
         if(!this.cuotas || typeof this.cuotas!== "number"){
+            let pas = document.getElementById("cuotas").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("cuotas").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("Ingrese las cuotas que desea");
             aprob=1;
+        }else{
+            let pas = document.getElementById("cuotas").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
 
         if(!this.numberCredit || typeof this.numberCredit!=="number"){
+            let pas = document.getElementById("numberCredit").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("numberCredit").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("Codigo de tarjeta mal ingresado");
             aprob=1;
+        }else{
+            let pas = document.getElementById("numberCredit").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
         
         if(!this.own || typeof this.own!=="string"){
+            let pas = document.getElementById("own").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("own").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("Debe ingresar el titular como figura en la Tarjeta");
             aprob=1;
+        }else{
+            let pas = document.getElementById("own").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
         let fecha = Date.parse(this.expiration);
         if(!this.expiration || isNaN(fecha)){
+            let pas = document.getElementById("expiration").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("expiration").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("La Fecha no esta en un Formato Correcto");
             aprob=1;
+        }else{
+            let pas = document.getElementById("expiration").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
         if(!this.codSeguridad || typeof this.codSeguridad!== "number"){
+            let pas = document.getElementById("cod").nextElementSibling;         
+            //corroboro que se escriba una sola vez
+            if(pas.matches(".requerido")) return false;
+
             d.getElementById("cod").insertAdjacentHTML("afterend", "<p class='requerido'>*Debe completar este campo</p>");
             //alert("Cod. Seguridad Incorrecto - El Cod. consta de 3 digistos");
             aprob=1;
+        }else{
+            let pas = document.getElementById("cod").nextElementSibling;
+            if(pas.matches(".requerido")) 
+                pas.remove();        
         }
 
         //imprimo Aviso de Exito!!
