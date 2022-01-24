@@ -648,6 +648,10 @@ h4 {
   font-size: 1.2rem;
 }
 
+.buyModal__frmCuotas .requed {
+  color: red;
+}
+
 @media screen and (max-width: 426px) {
   .buyModal__frmCuotas {
     -webkit-box-orient: vertical;
@@ -672,6 +676,10 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.buyModal__frmCard .requerido {
+  color: red;
 }
 
 .buyModal__price {

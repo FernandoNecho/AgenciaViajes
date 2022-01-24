@@ -298,6 +298,10 @@
             font-size: 1.2rem;
         }
 
+        .requed{
+            color: red;
+        }
+
         @include movil{
             flex-direction: column;
             align-items: stretch;
@@ -311,6 +315,11 @@
     &__frmCard{
         display: flex;
         flex-direction: column;
+
+
+        .requerido{
+            color: red;
+        }
     }
 
     &__price{

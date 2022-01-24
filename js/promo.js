@@ -1,12 +1,18 @@
-/*------------------Codificacion Pag promoBrasil------------------------*/
-/*al hacer click en paquete y en la tarjeta de brasil en el boton saber mas..
-se muestran los paquetes que hay para brasil*/
+/********************************************************************* 
+******************Codificacion Pag promoBrasil************************
+*al hacer click en paquete y en la tarjeta de brasil en el boton saber mas..
+*se muestran los paquetes que hay disponibles para el destino Brasil
+**********************************************************************/
 
 $(()=>{
+
+    //URL del Json local con los paquetes disponibles (datosBrasil.json)//
     const URLGET = "../json/datosBrasil.json";
     $.get(URLGET, function(respuesta, estado){
         if(estado==="success"){
             let destinos = respuesta;
+
+            //Cargo dinamicamente los paquetes disponibles
             for (const destino of destinos) {
                 $(".paquete").append(`
                     <div class="cardT">
@@ -87,7 +93,7 @@ $(()=>{
             });
 
             //boton que muestra la info del paquete solicitado a traves de un slide
-            //$(()=>{
+            $(()=>{
                 $(".fa").on("click", (e)=>{
                     
                     let id=(e.target.id).slice(2);
@@ -111,7 +117,7 @@ $(()=>{
                     });
                         
                 });
-            //});
+            });
 
             //Boton mostrar mas...
             $(()=>{
